@@ -1,0 +1,159 @@
+:root {
+  /* Colors from design system */
+  --color-ffffff: #ffffff;
+  --color-3c2f2f: #3c2f2f;
+  --color-6a6a6a: #6a6a6a;
+  --color-d9d9d9: #d9d9d9;
+  --color-ef2a39: #ef2a39;
+  --color-f5f5f5: #f5f5f5;
+  --color-f3f4f6: #f3f4f6;
+  --color-000000: #000000;
+  --color-ff9633: #ff9633;
+
+  /* Typography tokens */
+  --font-lobster: "Lobster", cursive, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-poppins: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  --font-roboto: "Roboto", system-ui, -apple-system, Segoe UI, Helvetica, Arial;
+  --font-inter: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+
+  /* Typo scales (from design system) */
+  --typo-0-size: 45px;
+  --typo-0-lh: 60.6094px;
+  --typo-0-weight: 400;
+
+  --typo-1-size: 18px;
+  --typo-1-lh: 27px;
+  --typo-1-weight: 500;
+
+  --typo-2-size: 18px;
+  --typo-2-lh: 21.09375px;
+  --typo-2-weight: 500;
+
+  --typo-3-size: 16px;
+  --typo-3-lh: 19.3636px;
+  --typo-3-weight: 500;
+
+  --typo-4-size: 16px;
+  --typo-4-lh: 21.55px;
+  --typo-4-weight: 500;
+
+  /* Elevation (shadows) */
+  --shadow-0: 0px 4px 19px 0px rgba(0,0,0,1);
+  --shadow-1: 0px 10px 18px -1px rgba(0,0,0,1);
+  --shadow-2: 0px 6px 17px 0px rgba(0,0,0,1);
+  --shadow-3: 0px 5px 16px 5px rgba(0,0,0,1);
+
+  /* Radii */
+  --radius-20: 20px;
+  --radius-35: 35px;
+
+  /* Spacing scale (subset for convenience) */
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-14: 14px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-56: 56px;
+  --space-64: 64px;
+  --space-72: 72px;
+  --space-88: 88px;
+  --space-104: 104px;
+  --space-128: 128px;
+}
+
+/* Base reset and layout helpers */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--color-f3f4f6);
+  color: var(--color-3c2f2f);
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: var(--space-24);
+}
+
+/* Cards and surfaces using styles from design system */
+.surface-white-20 {
+  background: var(--color-ffffff);
+  border-radius: var(--radius-20);
+  box-shadow: var(--shadow-2);
+}
+
+.surface-white-35 {
+  background: var(--color-ffffff);
+  border-radius: var(--radius-35);
+  box-shadow: var(--shadow-0);
+}
+
+.btn-primary {
+  background: var(--color-ef2a39);
+  color: var(--color-ffffff);
+  border: none;
+  border-radius: var(--radius-20);
+  padding: var(--space-12) var(--space-20);
+  font-family: var(--font-inter);
+  font-size: var(--typo-3-size);
+  font-weight: var(--typo-3-weight);
+  line-height: var(--typo-3-lh);
+  box-shadow: var(--shadow-1);
+  cursor: pointer;
+  transition: transform .15s ease, opacity .2s ease;
+}
+.btn-primary:hover { transform: translateY(-1px); }
+.btn-primary:active { transform: translateY(0); opacity: .9; }
+
+/* Headings per typography tokens */
+.h-title {
+  font-family: var(--font-lobster);
+  font-size: var(--typo-0-size);
+  font-weight: var(--typo-0-weight);
+  line-height: var(--typo-0-lh);
+  color: var(--color-3c2f2f);
+  margin: 0;
+}
+
+.subtitle {
+  font-family: var(--font-poppins);
+  font-size: var(--typo-1-size);
+  line-height: var(--typo-1-lh);
+  font-weight: var(--typo-1-weight);
+  color: var(--color-6a6a6a);
+}
+
+.caption {
+  font-family: var(--font-inter);
+  font-size: var(--typo-3-size);
+  line-height: var(--typo-3-lh);
+  font-weight: var(--typo-3-weight);
+  color: var(--color-6a6a6a);
+}
+
+/* Utility */
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}

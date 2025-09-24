@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tic Tac Toe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Lobster&family=Poppins:wght@500&family=Roboto:wght@500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="./common.css"/>
+  <link rel="stylesheet" href="./screen-1-49.css"/>
+</head>
+<body>
+  <main class="page">
+    <section class="hero container">
+      <div class="hero-card surface-white-35">
+        <header class="hero-header">
+          <h1 class="h-title">Tic Tac Toe</h1>
+          <p class="subtitle">Play a quick game and have fun</p>
+        </header>
+
+        <div class="board-wrapper surface-white-20">
+          <div class="board" role="grid" aria-label="Tic Tac Toe board">
+            <button class="cell" data-pos="0" role="gridcell" aria-label="Cell 1"></button>
+            <button class="cell" data-pos="1" role="gridcell" aria-label="Cell 2"></button>
+            <button class="cell" data-pos="2" role="gridcell" aria-label="Cell 3"></button>
+            <button class="cell" data-pos="3" role="gridcell" aria-label="Cell 4"></button>
+            <button class="cell" data-pos="4" role="gridcell" aria-label="Cell 5"></button>
+            <button class="cell" data-pos="5" role="gridcell" aria-label="Cell 6"></button>
+            <button class="cell" data-pos="6" role="gridcell" aria-label="Cell 7"></button>
+            <button class="cell" data-pos="7" role="gridcell" aria-label="Cell 8"></button>
+            <button class="cell" data-pos="8" role="gridcell" aria-label="Cell 9"></button>
+          </div>
+          <div class="status-row">
+            <span class="caption" id="statusText">Your turn: X</span>
+            <div class="actions">
+              <button class="btn-primary" id="resetBtn">Reset</button>
+            </div>
+          </div>
+        </div>
+
+        <footer class="hero-footer">
+          <p class="caption">Made with ♥ using Inter, Lobster, Poppins and Roboto</p>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
